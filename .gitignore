@@ -57,3 +57,7 @@ Carthage/Build
 
 fastlane/report.xml
 fastlane/screenshots
+
+# raylang-swift specific ignores
+*.smf
+*.png
