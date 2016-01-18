@@ -15,7 +15,10 @@ func main(args: [String]) {
   }
 
   let lines = smf.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
-  print("lines in \(path): \(lines.count)")
+  let vertices  = lines.filter({ $0.hasPrefix("v") })
+  let faces     = lines.filter({ $0.hasPrefix("f") })
+
+  print("vertices: \(vertices.count) faces: \(faces.count)")
 }
 
 main(Process.arguments)
