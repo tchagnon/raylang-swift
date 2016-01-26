@@ -9,16 +9,12 @@ func main(args: [String]) {
   print("cwd: " + NSFileManager.defaultManager().currentDirectoryPath)
 
   let path = args[1]
-  guard let smf = try? String(contentsOfFile: path, encoding: NSUTF8StringEncoding) else {
-    print("Unable to read file: \(path)")
+  guard let mesh = Mesh(path: path) else {
+    print("Unable to read smf file: \(path)")
     return
   }
-
-  let lines = smf.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
-  let vertices  = lines.filter({ $0.hasPrefix("v") })
-  let faces     = lines.filter({ $0.hasPrefix("f") })
-
-  print("vertices: \(vertices.count) faces: \(faces.count)")
+  
+  print("vertices: \(mesh.vertices.count) faces: \(mesh.faces.count)")
 }
 
 main(Process.arguments)

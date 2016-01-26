@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE20DA781C4C93A300C2AAF0 /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20DA771C4C93A300C2AAF0 /* Mesh.swift */; };
 		DEA06B6E1C48C72F00F9C279 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA06B6D1C48C72F00F9C279 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DE20DA771C4C93A300C2AAF0 /* Mesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mesh.swift; path = Sources/Mesh.swift; sourceTree = "<group>"; };
 		DEA06B621C48C6BD00F9C279 /* raylang-swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "raylang-swift"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA06B6D1C48C72F00F9C279 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = Sources/main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				DEA06B6D1C48C72F00F9C279 /* main.swift */,
+				DE20DA771C4C93A300C2AAF0 /* Mesh.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -119,6 +122,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE20DA781C4C93A300C2AAF0 /* Mesh.swift in Sources */,
 				DEA06B6E1C48C72F00F9C279 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
