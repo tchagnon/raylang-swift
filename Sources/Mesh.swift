@@ -5,8 +5,10 @@ struct Vec3f {
 }
 
 func readVertex(s: String) -> Vec3f {
-  //
-  return Vec3f(x: 0 ,y: 0 ,z: 0)
+  let v = s.componentsSeparatedByCharactersInSet(
+    NSCharacterSet.whitespaceCharacterSet())
+    .flatMap { Float($0) }
+  return Vec3f(x: v[0] ,y: v[1] ,z: v[2])
 }
 
 struct Face {
