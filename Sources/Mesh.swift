@@ -1,9 +1,5 @@
 import Foundation
 
-struct Vec3f {
-  let x, y, z: Float
-}
-
 func readVertex(s: String) -> Vec3f {
   let v = s.componentsSeparatedByCharactersInSet(
     NSCharacterSet.whitespaceCharacterSet())

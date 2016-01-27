@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		DE20DA781C4C93A300C2AAF0 /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20DA771C4C93A300C2AAF0 /* Mesh.swift */; };
+		DE495B721C588F3A00D80FDD /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE495B711C588F3A00D80FDD /* Math.swift */; };
+		DE495B911C58A1B500D80FDD /* MathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE495B741C588F9C00D80FDD /* MathTests.swift */; };
+		DE495B941C58A2E500D80FDD /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE495B711C588F3A00D80FDD /* Math.swift */; };
+		DE495B951C58A2EA00D80FDD /* Mesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20DA771C4C93A300C2AAF0 /* Mesh.swift */; };
+		DE495B961C58A2ED00D80FDD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA06B6D1C48C72F00F9C279 /* main.swift */; };
 		DEA06B6E1C48C72F00F9C279 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA06B6D1C48C72F00F9C279 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,11 +30,22 @@
 
 /* Begin PBXFileReference section */
 		DE20DA771C4C93A300C2AAF0 /* Mesh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Mesh.swift; path = Sources/Mesh.swift; sourceTree = "<group>"; };
+		DE495B711C588F3A00D80FDD /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Math.swift; path = Sources/Math.swift; sourceTree = "<group>"; };
+		DE495B741C588F9C00D80FDD /* MathTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MathTests.swift; path = Tests/MathTests.swift; sourceTree = "<group>"; };
+		DE495B881C58A10F00D80FDD /* raylang-swift-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "raylang-swift-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE495B901C58A13B00D80FDD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tests/Info.plist; sourceTree = "<group>"; };
 		DEA06B621C48C6BD00F9C279 /* raylang-swift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "raylang-swift"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA06B6D1C48C72F00F9C279 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = Sources/main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DE495B851C58A10F00D80FDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEA06B5F1C48C6BD00F9C279 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -40,10 +56,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE495B731C588F6200D80FDD /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DE495B741C588F9C00D80FDD /* MathTests.swift */,
+				DE495B901C58A13B00D80FDD /* Info.plist */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
 		DEA06B591C48C6BD00F9C279 = {
 			isa = PBXGroup;
 			children = (
 				DEA06B6C1C48C71400F9C279 /* Sources */,
+				DE495B731C588F6200D80FDD /* Tests */,
 				DEA06B631C48C6BD00F9C279 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				DEA06B621C48C6BD00F9C279 /* raylang-swift */,
+				DE495B881C58A10F00D80FDD /* raylang-swift-tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +88,7 @@
 			children = (
 				DEA06B6D1C48C72F00F9C279 /* main.swift */,
 				DE20DA771C4C93A300C2AAF0 /* Mesh.swift */,
+				DE495B711C588F3A00D80FDD /* Math.swift */,
 			);
 			name = Sources;
 			sourceTree = "<group>";
@@ -68,6 +96,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DE495B871C58A10F00D80FDD /* raylang-swift-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE495B8D1C58A10F00D80FDD /* Build configuration list for PBXNativeTarget "raylang-swift-tests" */;
+			buildPhases = (
+				DE495B841C58A10F00D80FDD /* Sources */,
+				DE495B851C58A10F00D80FDD /* Frameworks */,
+				DE495B861C58A10F00D80FDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "raylang-swift-tests";
+			productName = "raylang-swift-tests";
+			productReference = DE495B881C58A10F00D80FDD /* raylang-swift-tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DEA06B611C48C6BD00F9C279 /* raylang-swift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEA06B691C48C6BD00F9C279 /* Build configuration list for PBXNativeTarget "raylang-swift" */;
@@ -95,6 +140,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Timothy Chagnon";
 				TargetAttributes = {
+					DE495B871C58A10F00D80FDD = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					DEA06B611C48C6BD00F9C279 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -113,23 +161,73 @@
 			projectRoot = "";
 			targets = (
 				DEA06B611C48C6BD00F9C279 /* raylang-swift */,
+				DE495B871C58A10F00D80FDD /* raylang-swift-tests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		DE495B861C58A10F00D80FDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		DE495B841C58A10F00D80FDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE495B951C58A2EA00D80FDD /* Mesh.swift in Sources */,
+				DE495B911C58A1B500D80FDD /* MathTests.swift in Sources */,
+				DE495B961C58A2ED00D80FDD /* main.swift in Sources */,
+				DE495B941C58A2E500D80FDD /* Math.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEA06B5E1C48C6BD00F9C279 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DE20DA781C4C93A300C2AAF0 /* Mesh.swift in Sources */,
 				DEA06B6E1C48C72F00F9C279 /* main.swift in Sources */,
+				DE495B721C588F3A00D80FDD /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		DE495B8E1C58A10F00D80FDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tchagnon.raylang-swift-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DE495B8F1C58A10F00D80FDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tchagnon.raylang-swift-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		DEA06B671C48C6BD00F9C279 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -232,6 +330,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DE495B8D1C58A10F00D80FDD /* Build configuration list for PBXNativeTarget "raylang-swift-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE495B8E1C58A10F00D80FDD /* Debug */,
+				DE495B8F1C58A10F00D80FDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		DEA06B5D1C48C6BD00F9C279 /* Build configuration list for PBXProject "raylang-swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
