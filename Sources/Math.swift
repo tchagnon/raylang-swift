@@ -1,5 +1,9 @@
 // Math module for core vector and matrix operations.
-import Foundation
+#if os(Linux)
+  import Glibc
+#else
+  import Darwin
+#endif
 
 extension Float {
 
@@ -60,7 +64,7 @@ extension Vec3f {
   }
   
   func magnitude() -> Float {
-    return sqrt(magnitudeSquared())
+    return sqrtf(magnitudeSquared())
   }
   
   func norm() -> Vec3f {
@@ -147,7 +151,7 @@ extension Vec4f {
   }
   
   func magnitude() -> Float {
-    return sqrt(magnitudeSquared())
+    return sqrtf(magnitudeSquared())
   }
   
   func norm() -> Vec4f {
@@ -212,8 +216,8 @@ extension Mat4f {
   // Construct a rotation matrix
   static func rotate(v: Vec3f, angle: Float) -> Mat4f {
     let r = angle.toRadians()
-    let c = cos(r)
-    let s = sin(r)
+    let c = cosf(r)
+    let s = sinf(r)
     let (x, y, z) = (v.x, v.y, v.z)
     let (x2, y2, z2) = (x*x, y*x, z*z)
     return Mat4f(
